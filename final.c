@@ -54,12 +54,12 @@ void loop()
 
  
   if (rainsensor_digital_value==1){
-    tap_servo.write(180);      // gate off     // bristi na hole gate always off
+    tap_servo.write(180);      // gate off
 
   }
 
   if (rainsensor_digital_value==0 ){
-    tap_servo.write(0);       // gate open     // bristi na hole gate always open
+    tap_servo.write(0);       // gate open
   }
 
 
@@ -71,13 +71,13 @@ void loop()
   }
 
   else if (rainsensor_digital_value==1 &&  distanceInCm <3){
-    tap_servo.write(180);       // gate off       // rain na hole gate always e off thakbe e
-    digitalWrite(pump1, HIGH); // pump1 deactivated   // tanki full. so pump off
+    tap_servo.write(180);       // gate off       
+    digitalWrite(pump1, HIGH); // pump1 deactivated
     digitalWrite(led,LOW);     // light deactivate
   }
 
   if (rainsensor_digital_value==0 &&  distanceInCm >=4){
-    tap_servo.write(0);   // gate open    // rain hocce and ashik er tanki o faka so sathe sathe e tar tanki te nia jabo
+    tap_servo.write(0);   // gate open
     digitalWrite(pump1, LOW); // pump1 activated
     digitalWrite(led, HIGH);  // light activated
    
